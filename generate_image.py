@@ -70,7 +70,7 @@ def generate_image():
         plt.tight_layout()
     
     # save the graph(IMAGE)
-    img_path = f'static/images/{symptom_name}.png'
+    img_path = f'static/images/{symptom_name}.png' #the graphs will be saved in this folder
     plt.savefig(img_path)
     plt.close()  
     return render_template('history.html',symptom=symptoms,symptom_name=symptom_name,img_path="static/images/"+symptom_name+".png")
