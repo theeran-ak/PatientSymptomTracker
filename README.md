@@ -9,6 +9,11 @@ A simple application that allows patients to log and track their daily symptoms,
   Plotted against DateTime and Severity of the symptom.
 - **Health Recommendations**: ML model is used to predict the plausible disease pertaining to the patient using the recent symptoms and recommendations are provided based on the disease.
 
+##Technology stack
+-Python(FLask)
+-HTML & CSS
+-MYSQL
+
 ## Setup Instructions
 1. **Clone the Repository**:
    ```bash
@@ -48,6 +53,7 @@ A simple application that allows patients to log and track their daily symptoms,
        -Select <symptom> to graph of the specific symptom
    -- Go to recommendations to see recommendations of patients depending on their recent(last 7 weeks) symptoms
    
-   
+## code_ML&preprocessing folder contains codes related to preprocessing and ML creation
+
    
    
