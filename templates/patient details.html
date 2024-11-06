@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+    {% block styles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/forms.css')}}">
+
+{% endblock %}
+{% block title %}Patient Details{% endblock %}
+
+
+{% block content %}
+<div class="content">
+<div class="container">
+
+            <form action="/details_to_db" method="post">
+      <h1>Patient Details</h1>
+      <div class="input-container">
+          <div class="heading-container">
+            <label for="">Patient ID:</label>
+            <label for="">Name:</label>
+            <label for="">Age:</label>
+            <label for="">Phone:</label>
+          </div>
+          <div class="field-container">
+            <input type="text" name="p_id" placeholder="Eg: 2337">
+            <input type="text" name="p_name" placeholder="Eg: Bruce">
+            <input type="text" name="age" placeholder="Eg: 20">
+            <input type="text" name="contact" placeholder="Eg: 9876543210">
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+</div>
+</div>
+{% endblock %}
+
+
+
+    

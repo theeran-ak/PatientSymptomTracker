@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+    {% block styles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/forms.css')}}">
+{% endblock %}
+{% block title %}History{% endblock %}
+{% block content %}
+<div class="content">
+<div class="container">
+            <form action="/generate_image" method="post">
+      <h1>History Graph</h1>
+      <div class="input-container">
+          <div class="heading-container">
+            <label for="">Patient ID:</label>
+            <label for="">Symptom:</label>
+          </div>
+          <div class="field-container">
+            <input type="text" name="p_id" placeholder="Eg: 2337">
+            <select id="symptom" name="symptom">
+                <option value="common">Common</option>
+                {% for symp in symptom %}
+                    <option value="{{ symp }}">{{ symp.replace('_', ' ').title() }}</option>
+                {% endfor %}
+            </select>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <h1>Severity Trend for Symptom: {{ symptom_name }}</h1>
+    {% if img_path %}
+        <img src="{{ url_for('static', filename='images/'+symptom_name + '.png') }}" alt="Symptom">
+    {% else %}
+    <img src="{{ url_for('static', filename='images/'+symptom_name + '.png') }}" alt="Symptom">
+        <p>No data available for this symptom.</p>
+    {% endif %}
+</div>
+</div>
+{% endblock %}
+
+
+
+    
