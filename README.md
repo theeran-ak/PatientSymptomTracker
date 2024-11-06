@@ -6,6 +6,7 @@ A simple application that allows patients to log and track their daily symptoms,
 ## Features
 - **Log Symptoms**: Patients can record daily symptoms with severity ratings.
 - **View History**: Symptom history is displayed in an easy-to-understand graph(LINE GRAPH) and also Symptom wise graph(BAR GRAPH) can also be viewed.
+  Plotted against DateTime and Severity of the symptom.
 - **Health Recommendations**: ML model is used to predict the plausible disease pertaining to the patient using the recent symptoms and recommendations are provided based on the disease.
 
 ## Setup Instructions
