@@ -2,6 +2,7 @@
 
 ## Overview
 A simple application that allows patients to log and track their daily symptoms, view symptom history in a graph, and receive basic health recommendations.
+
 ![overview_GIF](assets/VID_20241119_172309-ezgif.com-speed.gif)
 
 
